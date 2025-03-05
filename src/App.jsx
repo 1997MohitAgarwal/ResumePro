@@ -243,7 +243,7 @@ const apiKey = `${part1}${part2}${part3}`;
             <div className="mb-12">
               <label className="w-full flex flex-col items-center justify-center p-12 border-2 border-dashed border-rose-400 rounded-2xl bg-gray-50 hover:bg-gray-100 transition-all duration-300 cursor-pointer">
                 <UploadCloud className="w-20 h-20 text-rose-300 mb-6" />
-                <span className="text-xl font-semibold text-gray-800">
+                <span className="text-xl lg:text-2xl text-center font-semibold text-gray-800">
                   {file ? file.name : "Upload Your Resume Now"}
                 </span>
                 <input
@@ -274,7 +274,7 @@ const apiKey = `${part1}${part2}${part3}`;
                   {renderStructuredContent(analysis)}
                 </div>
 
-                <h2 className="text-2xl font-semibold text-gray-800 mt-12 mb-6">
+                <h2 className="text-2xl font-semibold text-gray-800 mt-12 mb-1 lg:mb-6">
                   Chat with AI
                 </h2>
                 <div
