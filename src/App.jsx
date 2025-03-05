@@ -10,7 +10,7 @@ function Navbar() {
     <nav className="bg-white shadow-sm px-6 py-4 flex justify-between items-center border-b border-gray-100">
       <div className="flex items-center space-x-3">
         <img
-          src="/src/assets/images/Ai.png"
+          src="/assets/images/Ai.png"
           alt="App Logo"
           width={40}
           height={40}
