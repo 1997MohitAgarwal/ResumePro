@@ -237,7 +237,6 @@ const apiKey = `${part1}${part2}${part3}`;
                 <span className="text-2xl font-semibold text-gray-800">
                   {file ? file.name : "Upload Your Resume Now"}
                 </span>
-                <span className="text-lg text-gray-500 mt-2">File Upload</span>
                 <input
                   type="file"
                   accept=".pdf"
