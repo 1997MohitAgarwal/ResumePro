@@ -233,7 +233,7 @@ const apiKey = `${part1}${part2}${part3}`;
     <>
       <Navbar />
       <div className="flex flex-col min-h-[calc(100vh-73px)] bg-rose-100">
-        <div className="flex-grow flex items-center justify-center p-4">
+        <div className="flex-grow flex items-center justify-center p-2">
           <div className="w-full max-w-4xl bg-white rounded-2xl shadow-lg p-8 border border-gray-200">
             <h1 className="text-4xl font-bold text-center text-gray-800 mb-12">
               Resume Review Pro
@@ -266,20 +266,20 @@ const apiKey = `${part1}${part2}${part3}`;
 
             {analysis && (
               <div className="space-y-8">
-                <h2 className="text-2xl font-semibold text-gray-800 mb-6 flex items-center justify-center">
+                <h2 className="text-lg lg:text-2xl font-semibold text-gray-800 mb-6 flex items-center justify-center">
                   <CheckCircle className="w-8 h-8 text-green-500 mr-3" />
                   Resume Analysis
                 </h2>
-                <div className="max-h-100 overflow-y-auto p-6 bg-gray-50 rounded-xl">
+                <div className="max-h-100 overflow-y-auto p-3 bg-gray-50 rounded-xl">
                   {renderStructuredContent(analysis)}
                 </div>
 
-                <h2 className="text-2xl font-semibold text-gray-800 mt-12 mb-1 lg:mb-6">
+                <h2 className="text-lg lg:text-2xl text-center font-semibold text-gray-800 mt-12 mb-1 lg:mb-6">
                   Chat with AI
                 </h2>
                 <div
                   ref={chatContainerRef}
-                  className="h-72 overflow-y-auto bg-gray-50 rounded-xl p-6 space-y-4"
+                  className="h-72 overflow-y-auto bg-gray-50 rounded-xl p-3 space-y-4"
                 >
                   {messages.length === 0 ? (
                     <p className="text-gray-500 text-center">
