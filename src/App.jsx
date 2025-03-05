@@ -5,6 +5,7 @@ import { UploadCloud, Loader, CheckCircle, Send } from "lucide-react";
 
 pdfjsLib.GlobalWorkerOptions.workerSrc = pdfWorker;
 
+//Navbar
 function Navbar() {
   return (
     <nav className="bg-white shadow-sm px-6 py-4 flex justify-between items-center border-b border-gray-100">
@@ -70,6 +71,8 @@ const apiKey = `${part1}${part2}${part3}`;
     }
   };
 
+
+  // extract data from the resume
   const extractTextFromPDF = async (file) => {
     const fileReader = new FileReader();
     return new Promise((resolve, reject) => {
@@ -92,6 +95,8 @@ const apiKey = `${part1}${part2}${part3}`;
     });
   };
 
+
+  //send the data to the AI to generate analysis
   const parseResumeWithAI = async (resumeText) => {
     steps.forEach((_, index) => {
       setTimeout(() => setLoadingStep(index), index * 800);
@@ -135,6 +140,8 @@ const apiKey = `${part1}${part2}${part3}`;
     }
   };
 
+
+  //Chat with AI regarding the resume- User and AI chat
   const sendMessageToAI = async () => {
     if (!userMessage.trim() || !resumeText) return;
 
@@ -190,6 +197,7 @@ const apiKey = `${part1}${part2}${part3}`;
     }
   };
 
+  // Divide the contents based on headings ##Skills, ##Education etc
   const parseStructuredContent = (content) => {
     const sections = [];
     const regex = /##\s*(.+?)\n([\s\S]*?)(?=##|$)/g;
@@ -206,6 +214,7 @@ const apiKey = `${part1}${part2}${part3}`;
       : [{ title: "Response", content: content.trim() }];
   };
 
+  // Render the AI analysis in a structured manner in the UI
   const renderStructuredContent = (content) => {
     const sections = parseStructuredContent(content);
     return sections.map((section, index) => (
